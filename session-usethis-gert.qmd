@@ -1,0 +1,181 @@
+---
+title: "Introduction to Git and GitHub"
+title-slide-attributes: 
+  data-background-color: "#43464B"
+subtitle: "Session - Workflow with {usethis} and {gert}"
+author: "Zoë Turner"
+format:
+  revealjs:
+    theme: [default, nhsr-quarto.scss]
+    logo: https://raw.githubusercontent.com/nhs-r-community/assets/main/logo/nhsr-logo.svg
+    code-link: true
+    css: nhsr-quarto.scss
+    preview-links: true
+execute: 
+  echo: true
+  eval: false
+embed-resources: true  
+---
+
+## Not the command line!
+
+-   Many courses in Git refer to the Command line
+-   This is under the `Terminal` tab in RStudio
+-   There are many resources available for Git commands but perhaps the hardest part is the workflow
+-   Which is where R packages can make things a little friendlier...
+
+## Getting started
+
+Using two packages:
+
+```{r}
+library(usethis)
+library(gert)
+```
+
+::: {.callout-tip collapse="false" appearance="default" icon="true"}
+## Terminal or Console?
+
+The `Console` starts with `>` and is for `R`\
+The `Terminal` starts with `$` and is for `git` but other things too like `quarto`
+:::
+
+## Set up a project
+
+::: {.callout-tip collapse="false" appearance="default" icon="true"}
+## Remember!
+
+-   On Posit Cloud the workspace *is* a project!
+:::
+
+-   [Setting up a project on your own computer](https://nhs-r-community.github.io/intro-r-rstudio/session-projects.html#/title-slide)
+-   The Files should have a file called `*.Rproj` if it's a project
+
+## Start new work
+
+Rather than working on the `main` branch we need a copy called "new_work"
+
+```{r}
+usethis::pr_init("new_work")
+```
+
+1.  Next [create a quarto file](https://intro-r-rstudio.nhsrcommunity.com/session-quarto.html#/open-a-new-quarto-file)
+2.  include a title and author
+3.  Render it (which will require you to also save it)
+
+## Commit the new files
+
+In the Git pane three new items will have appeared
+
+-   the `*.qmd` file
+-   an `*.html` file from the rendered quarto
+-   a folder for the corresponding html (because this isn't self-contained)
+
+## Making a quarto html self-contained
+
+Add to the YAML (the first few lines at the top)
+
+```{r}
+#| code-line-numbers: "5"
+title: "My report"
+author: "Zoë Turner"
+format: html
+editor: visual
+embed-resources: true
+```
+
+And render again - the folder will disappear.
+
+## Staging the new files
+
+Individual new files can be `staged` with code or by ticking the box next to the file in the RStudio Git pane
+
+```{r}
+gert:git_add("name_of_file.qmd")
+```
+
+## Adding multiple files - first method
+
+-   Using [RStudio](https://nhsrcommunity.com/rstudio-and-git-selecting-many-files/) can be done in the Git pane by clicking on the first file name (highlighting it)
+-   Then use `Shift` and click the second file to highlight down (or arrow down)
+-   Select one of the tick boxes and they all get selected
+
+## Commit
+
+This records the changes with a message in Git
+
+```{r}
+gert::git_commit(message = "First commit for quatro document")
+```
+
+## Adding multiple files - second method
+
+Stage everything and do the commit message at the same time!
+
+```{r}
+gert::git_commit_all(message = "First commit for quatro document")
+```
+
+::: {.callout-warning collapse="false" appearance="default" icon="true"}
+## Watch out!
+
+This will only `stage` files that have already been "seen" as in committed.
+
+New files will get missed by this command.
+:::
+
+## Oops mistake in the message!
+
+Let's correct the misspelling of `quatro` to `quarto` using a feature of RStudio
+
+::: incremental
+-   Click on the `Commit` button in the Git pane of RStudio (a pop up will appear)
+-   Select the box `Amend previous commit` under the Commit message (starts off blank)
+-   Correct `quarot` for `quarto` and then click the Commit button.
+:::
+
+## Work in progress
+
+Committing frequently is beneficial but can create a lot of history (commits)
+
+::: incremental
+-   A recommended way of working can be to commit with a message "WIP" and update the one commit
+-   RStudio can be used to both change the message and add/delete files
+:::
+
+## Make a change as WIP
+
+-   Change the title of the quarto document and save
+-   Note the appearance of the file in the Git pane with an `M` icon next to it
+-   Stage the file using `gert::git_add("name_of_file.qmd")` or tick in RStudio
+-   Commit using the RStudio button and select `Amend previous commit`
+
+## Look at the history
+
+-   In the Git pane of RStudio click on `History`
+-   Show Diff will need to be selected as the files are new
+-   Two links will appear for the `*.qmd` and `*.html`, click on the qmd file
+-   You will see your most recent Title name and there is no reference to that because the commit was changed
+
+## A scenario for use
+
+::: incremental
+-   In building this course and the slides the content has changed a lot!
+-   Slides were merged and split out into topics but the content wasn't always changed
+-   WIP on a branch shared on GitHub can show you are still working on this as it's good practice to never have a WIP commit on `main`
+:::
+
+## Your turn!
+
+-   Remove the author of the quarto document, save and Render
+-   Create a new Quarto presentation and save
+-   Use `gert::git_commit_all("Removed author and created slides")`
+-   Stage and commit either as a new commit or amend the last
+
+## End session
+
+## Acknowledgements
+
+[Happy Git and GitHub](https://happygitwithr.com/) for the useR by Jenny Bryan
+
+[Pull Request Flow with usethis](https://www.garrickadenbuie.com/blog/pull-request-flow-usethis/?interactive=) by Garrick Aden-Buie

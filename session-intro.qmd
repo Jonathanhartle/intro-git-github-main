@@ -1,0 +1,98 @@
+---
+title: "Introduction to Git and GitHub"
+title-slide-attributes: 
+  data-background-color: "#43464B"
+subtitle: "Session - Introduction"
+author: "Zoë Turner"
+format:
+  revealjs:
+    theme: [default, nhsr-quarto.scss]
+    logo: https://raw.githubusercontent.com/nhs-r-community/assets/main/logo/nhsr-logo.svg
+    code-link: true
+    css: nhsr-quarto.scss
+    preview-links: true
+execute: 
+  echo: false
+  eval: false
+embed-resources: true  
+---
+
+## Opinionated Course Aims
+
+::: incremental
+-   To set up Git and GitHub using R and RStudio
+-   To practice a few workflows scenarios (but not all)
+-   To reassure that mistakes will happen and that's a feature of Git
+- [Turn around your Git mistakes in 17 ways](https://dev.to/smitterhane/turn-around-your-git-mistakes-in-17-ways-2mn1)  
+The following **comes with a language warning!**
+- [Oh Shit, Git!?!](https://ohshitgit.com/) 
+:::
+
+## Agenda - session one (about 3.5 hours)
+
+Chapter overview
+
+::: {.fragment .fade-in}
+Check prework set up and Introduction
+:::
+
+::: {.fragment .fade-in}
+Setting up
+:::
+
+::: {.fragment .fade-in}
+--------- Break -----------  
+:::
+
+::: {.fragment .fade-in}
+Version Control
+:::
+
+::: {.fragment .fade-in}
+
+Workflow
+:::
+
+::: {.fragment .fade-in}
+--------- Course end -----------
+:::
+
+
+## Agenda - session two (about 3.5 hours)
+
+Chapter overview
+
+::: {.fragment .fade-in}
+Useing R packages {gert} and {usethis}
+:::
+
+::: {.fragment .fade-in}
+Merge conflict!
+:::
+
+::: {.fragment .fade-in}
+--------- Break -----------
+:::
+
+::: {.fragment .fade-in}
+Commit to main (and undo last commit!)
+:::
+
+::: {.fragment .fade-in}
+Undo last merge
+:::
+
+::: {.fragment .fade-in}
+--------- Course end ---------
+:::
+
+
+## This is not a definitive course
+
+::: incremental
+- Like learning anything, you don't get "everything" all at once
+- There are many workflows that are possible but we can only learn a few in this workshop
+- This will get you started!
+:::
+
+## End session

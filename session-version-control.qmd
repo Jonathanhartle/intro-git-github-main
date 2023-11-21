@@ -1,0 +1,119 @@
+---
+title: "Introduction to Git and GitHub"
+title-slide-attributes: 
+  data-background-color: "#43464B"
+subtitle: "Session - What is version control?"
+author: "Zoë Turner"
+format:
+  revealjs:
+    theme: [default, nhsr-quarto.scss]
+    logo: https://raw.githubusercontent.com/nhs-r-community/assets/main/logo/nhsr-logo.svg
+    code-link: true
+    css: nhsr-quarto.scss
+    preview-links: true
+execute: 
+  echo: true
+  eval: false
+embed-resources: true  
+---
+
+## Git - the version control system
+
+> “Track Changes” features from Microsoft Word
+
+. . .
+
+> on steroids
+
+. . .
+
+Source: [Happy Git and GitHub for the useR](https://happygitwithr.com/big-picture.html?q=version%20control#big-picture) by Jenny Bryan
+
+## Managing your files
+
+Is this familiar?
+
+::: {.fragment .fade-in}
+file_v1.0.doc
+:::
+::: {.fragment .fade-in}
+file_v1.1.doc
+:::
+::: {.fragment .fade-in}
+file_v1.0.1.doc
+:::
+::: {.fragment .fade-in}
+file_final_1.0.doc
+:::
+::: {.fragment .fade-in}
+file_final_final.doc
+:::
+::: {.fragment .fade-in}
+Inspired by comic cartoons like [xkcd](https://xkcd.com/1459/)
+:::
+
+## Git learning downside
+
+Git may not really make sense if you are working on your own
+
+>A solo data analyst, working on a single computer, will benefit from adopting version control. But not nearly enough to justify the pain of installation and workflow upheaval. There are much easier ways to get versioned back ups of your files, if that’s all you’re worried about.
+
+[Happy Git and GitHub for the userR](https://happygitwithr.com/big-picture.html) - Jenny Bryan
+
+## Reasons why Git and GitHub hurts
+
+::: incremental
+- requires a completely new and longer workflow to your analysis
+- collaborating with others can cause **merge conflicts**
+- you can cause your own merge conflicts mess (we will do that in this course!)
+:::
+
+. . .
+
+> this is not a one-time pain, this could be a dull ache for a long time
+
+Source: Happy Git and GitHub for the useR - [Is it going to hurt](https://happygitwithr.com/big-picture.html?q=version%20control#is-it-going-to-hurt) by Jenny Bryan
+
+## So why bother?
+
+::: incremental
+- Personal exposure: sharing publicly can feel scary because you assume people will judge, but you'll soon find the judgement is positive as people are grateful for your sharing
+- Team exposure: there is a lot of repeated code for tasks duplicated across many organisations (particularly in the public sector)
+- Be keener: you can use other people's work (with the right [licences](https://nhs-r-community.github.io/statements-on-tools/open-code-in-the-nhs.html#licenceslicenses)) and keep up to date with all the work through GitHub for any changes, developments or improvements
+- Collaboration: we can work together! 
+:::
+
+## Git benefits
+
+:::incremental
+- Are important if you want to share/communicate with others
+- Are paramount if you want to collaborate
+- Combined with RStudio, GitHub and R packages, can be a little easier to get started
+:::
+
+## GitHub
+
+:::incremental
+- Uses Git but is a separate platform (other services are available)
+- It's a web hosted site for public and private repositories
+- GitHub is a very friendly user interface and is being updated with new features
+- Individuals and [organisations](https://github.com/nhs-r-community) can have accounts
+- You can have public and private repositories
+:::
+
+## RStudio benefits
+
+As with so many things, other IDEs (Integrated development environment) are available
+
+:::incremental
+- Never having to leave one program: clean data, visualise it and do statistics in one place!
+- Also allows version control and use of Git/GitHub without having to open another program
+:::
+
+## End session
+
+## Acknowledgements
+
+[Happy Git and GitHub](https://happygitwithr.com/) for the useR by Jenny Bryan
+
+Material adapted from the [Git training](https://github.com/nhs-r-community/git_training/blob/main/guides/workshop_slides/Part%201-Intro%20to%20Git-Version%20Control.pdf) delivered at the NHS-R Community conference 2022.

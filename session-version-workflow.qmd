@@ -1,0 +1,77 @@
+---
+title: "Introduction to Git and GitHub"
+title-slide-attributes: 
+  data-background-color: "#43464B"
+subtitle: "Session - Versioning workflow"
+author: "Zoë Turner"
+format:
+  revealjs:
+    theme: [default, nhsr-quarto.scss]
+    logo: https://raw.githubusercontent.com/nhs-r-community/assets/main/logo/nhsr-logo.svg
+    code-link: true
+    css: nhsr-quarto.scss
+    preview-links: true
+execute: 
+  echo: true
+  eval: false
+embed-resources: true  
+---
+
+## Snapshots
+
+It's good to practice regular saving of files when you work - whatever the program
+
+:::incremental
+- But what if you want to take a snapshot before you do something major?
+- You could save files as version 1, version 2 and so on 
+- Git allows whole project snapshots of many documents
+:::
+
+## Not just for new material
+
+Have you ever commented out code that you don't want to use but want to keep - just in case?
+
+:::incremental
+- Git allows things to be deleted and add a message as to why you did that
+- Roll backs are also available!
+- And if you want to find the old code but not roll back - Git has that history, it keeps everything
+:::
+
+## Local and Remote
+
+Once you have a snapshot stored locally (Git) you can **push** the snapshot to a remote site (GitHub) 
+
+This is like:
+
+::: incremental
+- sending file updates by email and also
+- sharing on something like DropBox
+:::
+
+## An unnecessary extra step?
+
+The tendency for much of analysis work is to share once something is finished
+
+But **commits** (snapshots):
+
+::: incremental
+- allow others to contribute with your work in progress
+- forces you to think clearly about code as others will see it
+- give the opportunity to **revert** (roll back) to something that was better
+:::
+
+## Private or public repository?
+
+GitHub offers the possibility of having private repositories
+
+::: {.fragment .fade-in}
+They have a few restrictions on functionality (unless in a paid account)
+:::
+::: {.fragment .fade-in}
+Still should never have any identifiable information for security 
+:::
+## End session
+
+# Acknowledgements
+
+[Happy Git and GitHub](https://happygitwithr.com/) for the useR by Jenny Bryan
