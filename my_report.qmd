@@ -1,6 +1,6 @@
 ---
 title: "My first report"
-author: "Jonathan Hartle"
+author: 
 format: html
 editor: visual
 embed-resources: true
